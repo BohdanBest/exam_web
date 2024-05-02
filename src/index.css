@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  @apply flex justify-center items-center relative h-full w-full gap-x-8 gap-y-8 pt-4;
+}
+.container {
+  @apply absolute max-w-screen-md top-52  flex justify-center items-center;
+}
+.traffic-light-vertical {
+  @apply flex justify-center items-center;
+}
+.traffic-light-horizontal {
+  @apply flex items-center flex-col transform rotate-[-90deg];
+}
+.traffic-light-container {
+  @apply min-h-16    rounded-[20px] bg-black flex items-center flex-col p-4 mb-28 gap-4 text-center text-black;
+}
+.traffic-light {
+  @apply bg-gray-500 h-[100px] w-[100px] rounded-full flex justify-center items-center cursor-pointer;
+}
+.traffic-light-pedestrian {
+  @apply flex flex-row gap-[500px] items-center;
+}
+.nav-container{
+  @apply flex items-center gap-4 ml-14 font-bold text-4xl
+}
+.navbar {
+  @apply relative right-1 justify-center flex font-sans font-semibold text-lg gap-6;
+}
+.home {
+  @apply flex flex-col items-center justify-center gap-5 absolute top-2;
+}
+
+.button{
+  @apply absolute bottom-20 right-[610px] 
+}
+.title{
+  @apply text-4xl font-bold
+}
+
+.btn {
+  @apply max-h-max min-w-max bg-slate-600 hover:bg-cyan-950 text-white font-black py-2 px-4 rounded-full;
+  &[disabled] {
+    @apply opacity-50 cursor-not-allowed;
+  }
+}
